@@ -54,6 +54,8 @@ public class HttpHeader {
     }
 
     public boolean isChunkedTransfer() {
-        return this.messageHeaders.getOrDefault("Transfer-Encoding", "-").equals("chunked");
+        return this.messageHeaders
+                .getOrDefault("Transfer-Encoding", "-")
+                .equals("chunked");
     }
 }
